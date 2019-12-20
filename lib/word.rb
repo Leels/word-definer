@@ -1,13 +1,14 @@
 class Word
-  attr_accessor :word_name, :id, :definition
+  attr_accessor :word_name, :id, :definition, :image
 
   @@words = {}
   @@total_rows = 0
 
-  def initialize(word_name, id, definition)
+  def initialize(word_name, id, definition, image)
     @word_name = word_name
     @id = id || @@total_rows += 1
     @definition = definition
+    @image = image
   end
 
   def self.all
@@ -20,7 +21,7 @@ class Word
   end
 
   def save
-    @@words[self.id] = Word.new(self.word_name, self.id, self.definition)
+    @@words[self.id] = Word.new(self.word_name, self.id, self.definition, self.image)
   end
 
   def ==(word_to_compare)
@@ -35,10 +36,11 @@ class Word
     @@words.delete(self.id)
   end
 
-  def update(word_name, definition)
+  def update(word_name, definition, image)
    self.word_name = word_name
    self.definition = definition
-   @@words[self.id] = Word.new(self.word_name, self.id, self.definition)
+   self.image = image
+   @@words[self.id] = Word.new(self.word_name, self.id, self.definition, self.image)
  end
 
  def self.search_by_word_name(word_name)

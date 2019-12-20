@@ -15,9 +15,9 @@ describe '#Word' do
 
   describe('.clear') do
       it("clears all words") do
-        word = Word.new("Abc", nil, "blah blah")
+        word = Word.new("Abc", nil, "blah blah", "img")
         word.save()
-        word2 = Word.new("Xyz", nil, "yada yada")
+        word2 = Word.new("Xyz", nil, "yada yada", "img")
         word2.save()
         Word.clear()
         expect(Word.all).to(eq([]))
@@ -26,9 +26,9 @@ describe '#Word' do
 
   describe('#save') do
     it("saves a word") do
-      word = Word.new("Abc", nil, "blah blah")
+      word = Word.new("Abc", nil, "blah blah", "img")
       word.save()
-      word2 = Word.new("Xyz", nil, "yada yada")
+      word2 = Word.new("Xyz", nil, "yada yada", "img")
       word2.save()
       expect(Word.all).to(eq([word, word2]))
     end
@@ -36,17 +36,17 @@ describe '#Word' do
 
   describe('#==') do
     it("is the same word if it has the same attributes as another word") do
-      word = Word.new("Abc", nil, "blah blah")
-      word2 = Word.new("Abc", nil, "blah blah")
+      word = Word.new("Abc", nil, "blah blah", "img")
+      word2 = Word.new("Abc", nil, "blah blah", "img")
       expect(word).to(eq(word2))
     end
   end
 
   describe('.find') do
     it("finds a word by id") do
-      word = Word.new("Abc", nil, "blah blah")
+      word = Word.new("Abc", nil, "blah blah", "img")
       word.save()
-      word2 = Word.new("Xyz", nil, "yada yada")
+      word2 = Word.new("Xyz", nil, "yada yada", "img")
       word2.save()
       expect(Word.find(word.id)).to(eq(word))
     end
@@ -54,9 +54,9 @@ describe '#Word' do
 
   describe('#delete') do
    it("deletes a word by id") do
-     word = Word.new("Abc", nil, "blah blah")
+     word = Word.new("Abc", nil, "blah blah", "img")
      word.save()
-     word2 = Word.new("Xyz", nil, "yada yada")
+     word2 = Word.new("Xyz", nil, "yada yada", "img")
      word2.save()
      word.delete()
      expect(Word.all).to(eq([word2]))
@@ -65,18 +65,18 @@ describe '#Word' do
 
  describe('#update') do
     it("updates a word by id") do
-      word = Word.new("Abc", nil, "blah blah")
+      word = Word.new("Abc", nil, "blah blah", "img")
       word.save()
-      word.update("Def", "new blah blah")
+      word.update("Def", "new blah blah", "img")
       expect(word.word_name).to(eq("Def"))
     end
   end
 
   describe('.search_by_word_name') do
     it("finds a word by word name") do
-      word = Word.new("Abc", nil, "blah blah")
+      word = Word.new("Abc", nil, "blah blah", "img")
       word.save()
-      word2 = Word.new("Xyz", nil, "yada yada")
+      word2 = Word.new("Xyz", nil, "yada yada", "img")
       word2.save()
       expect(Word.search_by_word_name(word.word_name)).to(eq([word]))
     end
@@ -84,9 +84,9 @@ describe '#Word' do
 
   describe('.alphabetize') do
     it("alphabetizes list of words") do
-      word = Word.new("Xyz", nil, "yada yada")
+      word = Word.new("Xyz", nil, "yada yada", "img")
       word.save()
-      word2 = Word.new("Abc", nil, "blah blah")
+      word2 = Word.new("Abc", nil, "blah blah", "img")
       word2.save()
       expect(Word.alphabetize).to(eq([word2, word]))
     end

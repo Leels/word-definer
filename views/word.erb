@@ -1,5 +1,6 @@
 <h3>Word: <%= @word.word_name %></h3>
 <h4>Definition: <%= @word.definition %></h4>
+<img src=" <%= @word.image %> ">
 
 
 <form action="/words/<%= @word.id %>/edit" method="get">
