@@ -68,17 +68,17 @@ describe '#Word' do
       word = Word.new("Abc", nil)
       word.save()
       word.update("Def")
-      expect(word.word).to(eq("Def"))
+      expect(word.word_name).to(eq("Def"))
     end
   end
 
-  describe('.search_by_word') do
+  describe('.search_by_word_name') do
     it("finds a word by word name") do
       word = Word.new("Abc", nil)
       word.save()
       word2 = Word.new("Xyz", nil)
       word2.save()
-      expect(Word.search_by_word(word.word)).to(eq([word]))
+      expect(Word.search_by_word_name(word.word_name)).to(eq([word]))
     end
   end
 
