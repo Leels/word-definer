@@ -72,4 +72,14 @@ describe '#Word' do
     end
   end
 
+  describe('.search_by_word') do
+    it("finds a word by word name") do
+      word = Word.new("Abc", nil)
+      word.save()
+      word2 = Word.new("Xyz", nil)
+      word2.save()
+      expect(Word.search_by_word(word.word)).to(eq([word]))
+    end
+  end
+
 end
