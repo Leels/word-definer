@@ -15,10 +15,10 @@ describe '#Word' do
 
   describe('.clear') do
       it("clears all words") do
-        stage = Word.new("Abc", nil)
-        stage.save()
-        stage2 = Word.new("Xyz", nil)
-        stage2.save()
+        word = Word.new("Abc", nil)
+        word.save()
+        word2 = Word.new("Xyz", nil)
+        word2.save()
         Word.clear()
         expect(Word.all).to(eq([]))
       end
@@ -62,5 +62,14 @@ describe '#Word' do
      expect(Word.all).to(eq([word2]))
    end
  end
- 
+
+ describe('#update') do
+    it("updates a word by id") do
+      word = Word.new("Abc", nil)
+      word.save()
+      word.update("Def")
+      expect(word.name).to(eq("Def"))
+    end
+  end
+
 end
