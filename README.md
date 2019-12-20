@@ -17,7 +17,7 @@
 
 
 |HTTP verb|Route|CRUD Action|Description|
-|---|---|---|---|---|
+|---|---|---|---|
 |GET|/words/:id/definitions/:definition_id|READ|Look at detail page for a single definition|
 |POST|/words/:id/definitions/:definition_id|CREATE|Add new definition to the list of definitions|
 |PATCH|/words/:id/definitions/:definition_id|UPDATE|Update a single definition|
