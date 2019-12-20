@@ -12,6 +12,8 @@ end
 get('/words') do
   if params["search"]
     @words = Word.search_by_word_name(params[:search])
+  elsif params["alphabetize"]
+    @words = Word.alphabetize
   else
     @words = Word.all
   end
@@ -43,7 +45,7 @@ end
 
 patch('/words/:id') do
     @word = Word.find(params[:id].to_i())
-    @word.update(params[:name], params[:definition])
+    @word.update(params[:word_name], params[:definition])
   @words = Word.all
   erb(:words)
 end
