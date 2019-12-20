@@ -45,4 +45,7 @@ class Word
     @@words.values.select { |word| /#{word_name}/i.match? word.word_name }
   end
 
+  def self.alphabetize
+     @@words.values().sort { |a, b| a.word_name.downcase <=> b.word_name.downcase }
+   end
 end

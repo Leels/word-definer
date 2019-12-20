@@ -88,7 +88,7 @@ describe '#Word' do
       word.save()
       word2 = Word.new("Abc", nil, "blah blah")
       word2.save()
-      expect(Album.all).to(eq([word2, word]))
+      expect(Word.alphabetize).to(eq([word2, word]))
     end
   end
 
