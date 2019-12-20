@@ -39,5 +39,8 @@ class Word
    @@words[self.id] = Word.new(self.word_name, self.id)
  end
 
+ def self.search_by_word_name(word_name)
+    @@words.values.select { |word| /#{word_name}/i.match? word.word_name }
+  end
 
 end
