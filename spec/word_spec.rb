@@ -68,7 +68,7 @@ describe '#Word' do
       word = Word.new("Abc", nil)
       word.save()
       word.update("Def")
-      expect(word.name).to(eq("Def"))
+      expect(word.word).to(eq("Def"))
     end
   end
 
