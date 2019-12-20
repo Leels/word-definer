@@ -82,4 +82,14 @@ describe '#Word' do
     end
   end
 
+  describe('.alphabetize') do
+    it("alphabetizes list of words") do
+      word = Word.new("Xyz", nil, "yada yada")
+      word.save()
+      word2 = Word.new("Abc", nil, "blah blah")
+      word2.save()
+      expect(Album.all).to(eq([word2, word]))
+    end
+  end
+
 end
