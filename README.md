@@ -6,7 +6,7 @@
 
 ### Specs/CRUD functionality
 |HTTP verb|Route|CRUD Action|Description|
-|---|---|---|---|---|
+|---|---|---|---|
 |GET|/words|READ|Get list of words|
 |GET|/words/:id|READ|Look at detail page for a single word|
 |POST|/words|CREATE|Add new word to the list of words|
