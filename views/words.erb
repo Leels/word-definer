@@ -1,24 +1,22 @@
+<h3><center>Your Words</center></h3>
+<% if @words.any? %>
+  <% @words.each do |word| %>
+    <h4><a href="/words/<%= word.id %>"><strong><%= word.word_name %></strong></a></h4>
+    <% end %>
+<% else %>
+<h4>There are currently no words to display.</h4>
+<% end %>
+    <form action="/words" method="get">
+      <button type="submit" name="alphabetize" class="btn btn-success">Alphabetize!</button>
+    </form>
+    <form action="/words/new" method="get">
+      <button type="submit" name="new" class="btn btn-warning">Add New Word</button>
+    </form>
+
 <h3><center>Word Search</center></h3>
 <form action="/words">
   <div class="form-group">
     <input id="search" name="search" class="form-control bg-success" type="text">
   </div>
   <button type="submit" class="btn btn-primary">Let's Go!</button>
-</form>
-
-<h3><center>Your Words</center></h3>
-<% if @words.any? %>
-<ul>
-  <% @words.each do |word| %>
-  <li><a href="/words/<%= word.id %>"><strong><%= word.word_name %></strong></a></li>
-  <% end %>
-</ul>
-<% else %>
-<p>There are currently no words to display.</p>
-<% end %>
-
-<p><a href="/words/new">Add a new word</a></p>
-
-<form action="/words" method="get">
-  <button type="submit" name="alphabetize" class="btn btn-primary">Alphabetize Words</button>
 </form>
