@@ -1,3 +1,10 @@
+# Word Definer
+## By: Lela Smith
+
+### Description
+#### Children's website that allows children to create new words and add a definition for their made-up words. A project to practice Test Driven Development in Ruby.
+
+### Specs/CRUD functionality
 |HTTP verb|Route|CRUD Action|Description|
 |---|---|---|---|---|
 |GET|/words|READ|Get list of words|
@@ -15,3 +22,21 @@
 |POST|/words/:id/definitions/:definition_id|CREATE|Add new definition to the list of definitions|
 |PATCH|/words/:id/definitions/:definition_id|UPDATE|Update a single definition|
 |DELETE|/words/:id/definitions/:definition_id|DELETE|Delete a definition from the list|
+
+### Known Bugs
+#### None
+
+### Setup
+* Clone this repository: https://github.com/Leels/word_definer.git
+* from _C:\Users\exampleUser\exampleCloneLocation\example-project-title>_  
+1. bundle (to bundle ruby gems)
+
+### Technologies Used
+* Ruby
+* Test Driven Development
+* Sinatra
+
+### License
+#### This software is licensed under the MIT license.
+
+#### Copyright (c) 2019 Lela Smith
