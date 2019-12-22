@@ -1,17 +1,18 @@
-<h3><center>Your Words</center></h3>
+<h1><center>Your Words</center></h1>
 <% if @words.any? %>
-  <% @words.each do |word| %>
-    <h4><a href="/words/<%= word.id %>"><strong><%= word.word_name %></strong></a></h4>
-    <% end %>
+<% @words.each do |word| %>
+<h3><a href="/words/<%= word.id %>"><strong><%= word.word_name %></strong></a></h3>
+<% end %>
 <% else %>
 <h4>There are currently no words to display.</h4>
 <% end %>
-    <form action="/words" method="get">
-      <button type="submit" name="alphabetize" class="btn btn-success">Alphabetize!</button>
-    </form>
-    <form action="/words/new" method="get">
-      <button type="submit" name="new" class="btn btn-warning">Add New Word</button>
-    </form>
+
+<form action="/words" method="get">
+  <button type="submit" name="alphabetize" class="btn btn-success">Alphabetize!</button>
+</form>
+<form action="/words/new" method="get">
+  <button type="submit" name="new" class="btn btn-warning">Add New Word</button>
+</form>
 
 <h3><center>Word Search</center></h3>
 <form action="/words">

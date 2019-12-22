@@ -1,14 +1,14 @@
-<h3><center>Update <%= @word.word_name() %></center></h3>
+<h2><center>Update <%= @word.word_name() %></center></h2>
 
 <form action="/words/<%= @word.id() %>" method="post">
   <input name="_method" type="hidden" value="patch">
-  <label for="word_name">Edit Word</label>
+  <h4 for="word_name">Edit Word:</h4>
   <input id="word_name" name="word_name" type="text" class="form-control">
-  <label for="definition">Edit Definition</label>
+  <h4 for="definition">Edit Definition:</h4>
   <input id="definition" name="definition" type="text" class="form-control">
-  <label for="image">Edit Word Image</label>
+  <h4 for="image">Edit Word Image:</h4>
   <input id="image" name="image" type="url" class="form-control">
-  <button type="submit" class="btn btn-primary">Update</button>
+  <button type="submit" class="btn btn-primary">Update!</button>
 </form>
 <br>
 <form action="/words/<%= @word.id() %>" method="post">

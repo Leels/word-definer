@@ -1,0 +1,33 @@
+.banner {
+  background: none;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: 3px 3px #cc3300;
+  font-size: bold;
+
+}
+
+body {
+  font-family: 'Permanent Marker', cursive;
+  background-image: url("https://wallpapermemory.com/uploads/741/jungle-background-hd-1440x960-447093.jpg");
+  background-repeat:no-repeat;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.card {
+  background-image: linear-gradient(to bottom right, #006600, #001a00);
+  padding: 40px;
+  border-radius: 20px;
+  border: solid #cc3300 2px;
+  /* border-width: 2px; */
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 20px;
+  border: solid #cc3300 2px;
+}
