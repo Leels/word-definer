@@ -3,8 +3,6 @@
   color: white;
   font-family: 'Permanent Marker', cursive;
   text-shadow: 3px 3px #cc3300;
-  font-size: bold;
-
 }
 
 body {
@@ -18,9 +16,9 @@ body {
 .card {
   background-image: linear-gradient(to bottom right, #006600, #001a00);
   padding: 40px;
+  margin: 40px;
   border-radius: 20px;
   border: solid #cc3300 2px;
-  /* border-width: 2px; */
 }
 
 .card img {
