@@ -1,4 +1,4 @@
-<h2>Word: <%= @word.word %></h2>
+<h2>Word: <%= @word.word_name %></h2>
 <img src="<%= @word.image %>" alt="">
 
 <h3>Word Definition</h3>
@@ -20,11 +20,12 @@
     <label for="definition">Definition</label>
     <input id="definition" name="definition" class="form-control" type="text">
   </div>
-  <button type="submit" class="btn">Add Definition</button>
+  <button type="submit" class="btn btn-primary">Add Definition</button>
 </form>
+<br>
 
 <form action="/words/<%= @word.id %>/edit" method="get">
-  <button type="submit" name="edit" class="btn btn-primary">Edit Word</button>
+  <button type="submit" name="edit" class="btn btn-warning">Edit Word</button>
 </form>
 <br>
 <form action="/words" method="get">
