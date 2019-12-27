@@ -29,11 +29,15 @@
 ### Setup
 * Clone this repository: https://github.com/Leels/word_definer.git
 * from _C:\Users\exampleUser\exampleCloneLocation\example-project-title>_  
-1. bundle (to bundle ruby gems)
+1. $ bundle install
+2. $ ruby app.rb
+  * This site can be viewed on Heroku at https://whispering-retreat-15335.herokuapp.com/
 
 ### Technologies Used
+* HTML
+* CSS
+* Bootstrap
 * Ruby
-* Test Driven Development
 * Sinatra
 
 ### License
