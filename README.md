@@ -2,7 +2,7 @@
 ## By: Lela Smith
 
 ### Description
-#### Children's website that allows children to create new words and add a definition for their made-up words. A project to practice Test Driven Development in Ruby.
+#### Children's website that allows children to create new words and add a definition for their made-up words. A project to practice routing with Sinatra and Test Driven Development in Ruby.
 
 ### Specs/CRUD functionality
 |HTTP verb|Route|CRUD Action|Description|
