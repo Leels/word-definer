@@ -1,19 +1,19 @@
 class Definition
 
   attr_reader :id
-  attr_accessor :definition, :word_id
+  attr_accessor :definition_text, :word_id
 
   @@definitions = {}
   @@total_rows = 0
 
-  def initialize(definition, word_id, id)
-    @definition = definition
+  def initialize(definition_text, word_id, id)
+    @definition_text = definition_text
     @word_id = word_id
     @id = id || @@total_rows += 1
   end
 
   def ==(definition_to_compare)
-    (self.definition() == definition_to_compare.definition()) && (self.word_id() == definition_to_compare.word_id())
+    (self.definition_text() == definition_to_compare.definition_text()) && (self.word_id() == definition_to_compare.word_id())
   end
 
   def self.all
@@ -21,17 +21,17 @@ class Definition
   end
 
   def save
-    @@definitions[self.id] = Definition.new(self.definition, self.word_id, self.id)
+    @@definitions[self.id] = Definition.new(self.definition_text, self.word_id, self.id)
   end
 
   def self.find(id)
     @@definitions[id]
   end
 
-  def update(definition, word_id)
-    self.definition = definition
+  def update(definition_text, word_id)
+    self.definition_text = definition_text
     self.word_id = word_id
-    @@definitions[self.id] = Definition.new(self.definition, self.word_id, self.id)
+    @@definitions[self.id] = Definition.new(self.definition_text, self.word_id, self.id)
   end
 
   def delete
