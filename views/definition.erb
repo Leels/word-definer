@@ -1,8 +1,9 @@
 <h2>Definition: <%= @definition.definition_text %></h2>
 <h3>Word: <%= @definition.word.word_name %></h3>
+<img src="<%= @definition.word.image %>" alt="">
 <form action="/words/<%= @definition.word.id %>/definitions/<%= @definition.id %>" method="post">
   <input name="_method" type="hidden" value="patch">
-  <label for="text">Update Definition</label>
+  <h3 for="text">Update Definition:</h3>
   <input class="form-control" id="text" name="text" type="text" >
   <br>
   <button class=" btn btn-warning" type="submit">Update Definition</button>

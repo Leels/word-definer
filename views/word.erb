@@ -1,7 +1,7 @@
 <h2>Word: <%= @word.word_name %></h2>
 <img src="<%= @word.image %>" alt="">
 
-<h3>Word Definition</h3>
+<h3>Word Definition:</h3>
 
   <% if @word.definitions %>
     <ul>
@@ -13,12 +13,11 @@
     <p>There are no definitions listed for this word yet.</p>
   <% end %>
 
-<h4>Add a definition:</h4>
+<h4>Add a definition!</h4>
 
 <form action="/words/<%= @word.id %>/definitions" method="post">
   <div class="form-group">
-    <label for="definition_text">Definition</label>
-    <input id="definition_text" name="definition_text" class="form-control" type="text">
+    <input id="definition_text" name="definition_text" class="form-control" type="text" placeholder="Definition">
   </div>
   <button type="submit" class="btn btn-primary">Add Definition</button>
 </form>

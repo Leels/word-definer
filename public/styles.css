@@ -1,24 +1,61 @@
-.banner {
-  background: none;
-  color: white;
-  font-family: 'Permanent Marker', cursive;
-  text-shadow: 3px 3px #cc3300;
+body {
+  background:
+  /* Pineapple details */
+  radial-gradient(circle closest-side at 50px 50px, #FB8B24 3px, transparent 0),
+  radial-gradient(circle closest-side at 40px 60px, #FB8B24 3px, transparent 0),
+  radial-gradient(circle closest-side at 60px 60px, #FB8B24 3px, transparent 0),
+  radial-gradient(circle closest-side at 50px 70px, #FB8B24 3px, transparent 0),
+  radial-gradient(circle closest-side at 150px 165px, #FB8B24 3px, transparent 0),
+  radial-gradient(circle closest-side at 140px 175px, #FB8B24 3px, transparent 0),
+  radial-gradient(circle closest-side at 160px 175px, #FB8B24 3px, transparent 0),
+  radial-gradient(circle closest-side at 150px 185px, #FB8B24 3px, transparent 0),
+  /* Pineapple base */
+  radial-gradient(ellipse closest-side at 50px 60px, #F9A734 18px, transparent 0),
+  radial-gradient(ellipse closest-side at 150px 175px, #F9A734 18px, transparent 0),
+  /* Pineapple leafs */
+  radial-gradient(circle closest-side at 30px 40px, #F9D8D4 15px, transparent 0),
+  radial-gradient(circle closest-side at 40px 35px, #36964C 15px, transparent 0),
+  radial-gradient(circle closest-side at 70px 40px, #F9D8D4 15px, transparent 0),
+  radial-gradient(circle closest-side at 60px 35px, #286E38 15px, transparent 0),
+  radial-gradient(circle closest-side at 130px 155px, #F9D8D4 15px, transparent 0),
+  radial-gradient(circle closest-side at 140px 150px, #36964C 15px, transparent 0),
+  radial-gradient(circle at 170px 155px, #F9D8D4 15px, transparent 0),
+  radial-gradient(circle at 160px 150px, #286E38 15px, transparent 0)
+  ;
+  background-color: #F9D8D4;
+  background-size: 180px 210px;
+  animation: animatedBackground .5s cubic-bezier(.61,-0.64,.58,1.46) forwards;
+}
+@keyframes animatedBackground {
+  from { background-position: 0 50%; }
+  to { background-position: 0 0; }
 }
 
 body {
-  font-family: 'Permanent Marker', cursive;
-  background-image: url("https://wallpapermemory.com/uploads/741/jungle-background-hd-1440x960-447093.jpg");
-  background-repeat:no-repeat;
+  color: #ff8000;
+  /* text-shadow: 2px 2px  #ff8000; */
+}
+
+.banner {
+  background: none;
   color: white;
-  text-shadow: 1px 1px black;
+  text-shadow: 3px 3px #ff37a3;
+}
+
+.banner h1 {
+  display: inline;
+  position: relative;
+  font: 130px Helvetica, Sans-Serif;
+  letter-spacing: -5px;
 }
 
 .card {
-  background-image: linear-gradient(to bottom right, #006600, #001a00);
+  background: #ffcc99;
   padding: 40px;
   margin: 40px;
+  margin-top: 0px;
   border-radius: 20px;
-  border: solid #cc3300 2px;
+  border: solid #ff8000 2px;
 }
 
 .card img {
@@ -27,4 +64,5 @@ body {
   margin-right: auto;
   width: 50%;
   border-radius: 20px;
+  border: solid #ff8000 2px;
 }
