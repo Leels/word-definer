@@ -24,7 +24,6 @@ body {
   ;
   background-color: #F9D8D4;
   background-size: 180px 210px;
-  color: #ff8000;
   animation: animatedBackground .5s cubic-bezier(.61,-0.64,.58,1.46) forwards;
 }
 @keyframes animatedBackground {
@@ -34,10 +33,11 @@ body {
 
 .banner {
   background: none;
-  text-shadow: 3px 3px #ff37a3;
 }
 
 .banner h1 {
+  color: #FFFAF0;
+  text-shadow: 3px 3px #ff37a3;
   display: inline;
   position: relative;
   font: 130px Helvetica, Sans-Serif;
@@ -46,6 +46,7 @@ body {
 
 .card {
   background: #ffcc99;
+  color: #ff8000;
   padding: 40px;
   margin: 40px;
   margin-top: 0px;
