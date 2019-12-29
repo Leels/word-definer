@@ -3,16 +3,15 @@
 
 <h3>Word Definition:</h3>
 
-  <% if @word.definitions %>
-    <ul>
-      <% @word.definitions.each do |definition| %>
-        <li><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.definition_text %></a></li>
-      <% end %>
-    </ul>
-  <% else %>
-    <p>There are no definitions listed for this word yet.</p>
-  <% end %>
+<% if @word.definitions %>
+<% @word.definitions.each do |definition| %>
+<h3><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.definition_text %></a></h3>
+<% end %>
+<% else %>
+<p>There are no definitions listed for this word yet.</p>
+<% end %>
 
+<br>
 <h4>Add a definition!</h4>
 
 <form action="/words/<%= @word.id %>/definitions" method="post">
