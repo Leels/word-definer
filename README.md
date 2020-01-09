@@ -31,7 +31,7 @@
 * from _C:\Users\exampleUser\exampleCloneLocation\example-project-title>_  
 1. $ bundle install
 2. $ ruby app.rb
-  * This project is fully deployed on **Heroku** [here](https://whispering-retreat-15335.herokuapp.com/)
+  * This project is fully deployed on **Heroku** [here](https://gentle-lowlands-10115.herokuapp.com/)
 
 ### Technologies Used
 * HTML
