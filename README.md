@@ -18,10 +18,11 @@
 
 |HTTP verb|Route|CRUD Action|Description|
 |---|---|---|---|
-|GET|/words/:id/definitions/:definition_id|READ|Look at detail page for a single definition|
-|POST|/words/:id/definitions/:definition_id|CREATE|Add new definition to the list of definitions|
-|PATCH|/words/:id/definitions/:definition_id|UPDATE|Update a single definition|
-|DELETE|/words/:id/definitions/:definition_id|DELETE|Delete a definition from the list|
+|GET|/words/:id/definitions|READ|Get a list of all the definitions for a word.|
+|GET|/words/:id/definitions/:definition_id|READ|Look at the detail page for a single definition.|
+|POST|/words/:id/definitions|CREATE|Add new definition to a word.|
+|PATCH|/words/:id/definitions/:definition_id|UPDATE|Update a single definition.|
+|DELETE|/words/:id/definitions/:definition_id|DELETE|Delete a definition from a word.|
 
 ### Known Bugs
 #### None
